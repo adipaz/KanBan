@@ -1,0 +1,25 @@
+﻿<Window x:Class="KanbanProject.PresentationLayer.BoardsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KanbanProject.PresentationLayer"
+        mc:Ignorable="d"
+        Title="BoardsWindow" Height="450" Width="800">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Background="CornflowerBlue" Height="423" VerticalAlignment="Top" Width="177"/>
+        <Grid HorizontalAlignment="Left" Background="LightBlue" Height="242" VerticalAlignment="Top" Width="618" Margin="177,111,0,0"/>
+        <Grid HorizontalAlignment="Left" Background="LightSteelBlue" Width="618" Margin="177,353,0,-0.2"/>
+        <Grid HorizontalAlignment="Left" Background="CornflowerBlue" Height="111" VerticalAlignment="Top" Width="701" Margin="94,0,0,0">
+            <Label Content="KanBan" FontSize="50" FontStyle="Oblique" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="328,8,0,0" Width="208" Height="93"/>
+            <Image Margin="236,18,378,31" Source="/KanbanProject;component/kanban.jpg" Stretch="Fill"/>
+        </Grid>
+        <ComboBox ItemsSource="{Binding BoardsItems}" SelectedItem="{Binding BoardName}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="147" Margin="408,0,0,211.8" Height="24"/>
+        <Button Name="viewBtn" Content="Go to board" Background="LightBlue" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Margin="371,283,0,0" Click="ViewBtn_Click" />
+        <Label Content="Choose board:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="245,185,0,0"/>
+        <Button Name="removeBtn" Content="Remove board" Background="LightBlue" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Margin="495,283,0,0" Click="RemoveBtn_Click"/>
+        <Button x:Name="addBtn" Content="Add board" Background="CornflowerBlue" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="89" Margin="40,268,0,0" Click="AddBtn_Click" />
+        <Label Content="Insert new board's name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,175,0,0"/>
+        <TextBox HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Text="{Binding NewBoardName}" VerticalAlignment="Top" Width="89" Margin="40,206,0,0"/>
+    </Grid>
+</Window>

@@ -1,0 +1,26 @@
+﻿<Window x:Class="KanbanProject.PresentationLayer.LimitColumnWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KanbanProject.PresentationLayer"
+        mc:Ignorable="d"
+        Title="LimitColumnWindow" Height="413.619" Width="795.72">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Background="CornflowerBlue" Height="386" VerticalAlignment="Top" Width="177"/>
+        <Grid HorizontalAlignment="Left" Background="LightBlue" Height="242" VerticalAlignment="Top" Width="618" Margin="177,111,0,0"/>
+        <Grid HorizontalAlignment="Left" Background="LightSteelBlue" Width="614" Margin="177,353,-0.2,0.4"/>
+        <Grid HorizontalAlignment="Left" Background="CornflowerBlue" Height="111" VerticalAlignment="Top" Width="701" Margin="94,0,0,0">
+            <Label Content="KanBan" FontSize="50" FontStyle="Oblique" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="328,8,0,0" Width="208" Height="93"/>
+            <Image Margin="236,18,378,31" Source="/KanbanProject;component/kanban.jpg" Stretch="Fill"/>
+        </Grid>
+        <Label Name="LimitLabel" Content="Limit Column" HorizontalAlignment="Center" Margin="398,123,100.8,0" VerticalAlignment="Top" Width="292"  FontSize="20"/>
+        <ComboBox ItemsSource="{Binding CBItems}" SelectedItem="{Binding ColumnName1}" Name="columnCB" HorizontalAlignment="Left" Margin="421,182,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Name="limitBtn" Background="LightBlue" BorderThickness="1" BorderBrush="Black" Content="Limit Column" HorizontalAlignment="Left" Margin="421,284,0,0" VerticalAlignment="Top" Width="120"  Click="limitBtn_Click"/>
+        <TextBox Name="limTxtBox" Background="LightBlue" BorderThickness="1" BorderBrush="Black"  HorizontalAlignment="Left" Height="20" Margin="454,227,0,0" TextWrapping="Wrap" Text="{Binding Lim}" VerticalAlignment="Top" Width="61"/>
+        <Label Content="Choose column to limit:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,178,0,0"/>
+        <Label Content="Limit number:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,221,0,0"/>
+        <Button Name="cancelBtn" Background="LightBlue" BorderThickness="1" BorderBrush="Black" Content="Cancel" HorizontalAlignment="Left" Margin="618,284,0,0" VerticalAlignment="Top" Width="120"  Click="CancelBtn_Click" />
+
+    </Grid>
+</Window>
